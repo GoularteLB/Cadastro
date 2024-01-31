@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista</title>
+</head>
+<body>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome:</th>
+            <th>Login:</th>
+            <th>Senha:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <td data-th-each="funcionario: ${funcionarios}"></td>
+        <td data-th-text="${funcionario.nome}"></td>
+        <td data-th-text="${funcionario.login}"></td>
+        <td data-th-text="${funcionario.senha}"></td>
+        <td><a th:href="@{'funcionario/excluir/+${funcionario.id}'}">excluir</a></td>
+        
+    </tbody>
+</body>
+</html>
